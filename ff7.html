@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ff7</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background:linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.8)) , url("./material/bg-full.jpg") ;
+      /*
+      (( 若要做遮罩將圖片顏色調暗
+          1. 必須將圖片與遮罩寫在同一行 background: 內，若寫成兩行語法會後蓋前
+          2. 遮色需寫在圖片之前 background-image:linear-gradient() , url("") ; 才遮得到
+          3. linear-gradient 漸層內需放兩個顏色 rgba(0, 0, 0, 0.7) , rgba(0, 0, 0, 0.7) ))
+      */
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .box {
+      width: 80%;
+      height: 80%;
+      background: #ccc;
+      display: flex;
+      border: 1px solid #333;
+    }
+
+    .left {
+      width: 50%;
+      height: 100%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) , url("./material/main.jpg");
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .right {
+      width: 50%;
+      height: 100%;
+      /* display: flex;
+      flex-direction: column; */
+    }
+
+    .Cloud {
+      height: 50%;
+      background: #aaa;
+      background-image: url("./material/cloud.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 60px;
+    }
+    
+    .Tifa{
+      height: 50%;
+      background: #000;
+      background-image: url("./material/tifa.png");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 320px;
+    }
+
+    img {
+      width: 30%;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #fff;
+    }
+
+    p {
+      display: inline-block;
+      width: 80%;
+      font-size: 26px;
+      color: #fff;
+      margin-top: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="left">
+      <img src="./material/ps4-ff7.png">
+      <h1>AVAILABLE NOW</h1>
+      <p style="text-align: center;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus saepe quae velit iste laudantium asperiores laborum sed debitis beatae! Debitis non accusantium voluptate nam quam voluptates nulla saepe ipsum nemo.
+      </p>
+    </div>
+    <div class="right">
+      <div class="Cloud">
+        <h1 style="color: #000;">Cloud</h1>
+        <p style="color: #000; width: 60%;">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus saepe quae velit iste laudantium asperiores laborum sed debitis beatae! Debitis non accusantium voluptate nam quam voluptates nulla saepe ipsum nemo.
+        </p>
+      </div>
+      <div class="Tifa">
+        <h1>Tifa</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus saepe quae velit iste laudantium asperiores laborum sed debitis beatae! Debitis non accusantium voluptate nam quam voluptates nulla saepe ipsum nemo.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
